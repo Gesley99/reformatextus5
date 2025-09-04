@@ -48,7 +48,8 @@ const Contact = () => {
                 <CardTitle className="text-2xl">Solicite um orçamento</CardTitle>
               </CardHeader>
               <CardContent>
-                <form action="/obrigado"
+                {/* === ABERTURA DO FORM AJUSTADA (Passo 1) === */}
+                <form
                   name="contact"
                   method="POST"
                   data-netlify="true"
@@ -202,7 +203,6 @@ const Contact = () => {
                         className="focus:ring-2 focus:ring-primary"
                         value={formData.deadline_time}
                         onChange={(e) => handleInputChange("deadline_time", e.target.value)}
-                        required
                       />
                     </div>
                   </div>
@@ -230,6 +230,7 @@ const Contact = () => {
                     </Button>
                   </div>
                 </form>
+                {/* === FIM DO FORM AJUSTADO === */}
               </CardContent>
             </Card>
           </div>
